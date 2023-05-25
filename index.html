@@ -1,0 +1,15 @@
+<title>テトレーション</title>
+<input type="number" id="base" />
+<input type="number" id="exponent" />
+<button onclick="calculate()">計算</button>
+<div id="result"></div>
+<script>
+function calculate() {
+  var base = document.getElementById("base").value;
+  var exponent = document.getElementById("exponent").value;
+  var exponent = Math.pow(exponent, exponent);
+    var base = Math.pow(base, exponent);
+    
+    var result = (base);
+  document.getElementById("result").innerHTML = result;}
+</script>
