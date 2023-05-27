@@ -1,16 +1,15 @@
 <link rel="icon" href="favicon.ico">
 <title>テトレーション</title>
-<input type="number" id="base" />
-<input type="number" id="exponent" />
-<button onclick="calculate()">計算</button>
-<div id="result"></div>
+<input type="number" id="base" placeholder="">
+<input type="number" id="height" placeholder="">
+<button onclick="tetration()">計算</button>
+<p id="result"></p>
 <script>
-function calculate() {
-  var base = document.getElementById("base").value;
-  var exponent = document.getElementById("exponent").value;
-  var exponent = Math.pow(exponent, exponent);
-    var base = Math.pow(base, exponent);
-    
-    var result = (base);
-  document.getElementById("result").innerHTML = result;}
+function tetration() {
+const base = document.getElementById('base').value;
+const height = document.getElementById('height').value;
+let result = 1;
+for (let i = 0; i < height; i++) {
+result = Math.pow(base, result);}
+document.getElementById('result').innerHTML = result;}
 </script>
